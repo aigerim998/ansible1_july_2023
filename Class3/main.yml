@@ -1,0 +1,15 @@
+- hosts: all
+  vars:
+    php_version: 73
+  tasks:
+  - name: Install Apache
+    include: apache.yml
+  - name: install other packages
+    include: packages.yml
+  - name: install php
+    include: php.yml 
+  - name: Install wordpress
+    include: wordpress.yml
+
+  - name: install database
+    include: db.yml
